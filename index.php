@@ -7,6 +7,11 @@
         $mail = $_GET['mail'];
         $age = intval($_GET['age']);
 
+
+        if(($name !== undefined) || ($mail !== undefined) || ($age !== undefined)) {
+            echo 'Inserire un valore valido';
+        }
+
         // $info = [
         //     'name' => $name;
         //     'mail' => $mail;
@@ -19,7 +24,7 @@
             echo 'Inserisci un nome più lungo di 3 caratteri';
         } elseif ( strpos($mail, '@') === false || (strpos($mail, '.') === false ) )  {
             echo 'Inserisci una mail corretta';
-        } elseif (is_numeric($age) === false) {
+        } elseif ($age === 0) {
             echo 'Inserisci un\'età numerica';
         } 
 ?>

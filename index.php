@@ -8,7 +8,7 @@
         $age = intval($_GET['age']);
 
 
-        if(($name !== undefined) || ($mail !== undefined) || ($age !== undefined)) {
+        if(($name == undefined) || ($mail == undefined) || ($age == undefined)) {
             echo 'Inserire un valore valido';
         }
 
